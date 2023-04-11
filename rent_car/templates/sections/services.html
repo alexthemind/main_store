@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block title %}
+    <title>Servicios</title>
+{% endblock %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <div class="flex space-between items-start">
+        <div id="left-block" class="absolute h-[100%] w-[0%] p-0 bg-yellow-500 overflow-hidden">
+
+            <!--SERVICIOS-->
+            <br>
+            <br>
+            <br>
+            <div id="services-block">
+                <span class="text-4xl font-bold text-white drop-shadow-lg">
+                    Nuestros Servicios
+                </span>
+                <br>
+                <br>
+                <hr>
+                <ul class="p-2 text-white drop-shadow-lg text-white text-xl font-bold">
+                    <li><i class="fa fa-check"></i> Rent Car con las mejores marcas</li>
+                    <li><i class="fa fa-check"></i> Los mejores precios</li>
+                    <li><i class="fa fa-check"></i> Rescate donde quier aque estes</li>
+                    <li><i class="fa fa-check"></i> Contacto 24/7</li>
+                    <li><i class="fa fa-check"></i> Más variedades de vehiculos para ti</li>
+                    <li><i class="fa fa-check"></i> Precios varian segun días festivos</li>
+                </ul>
+                <br>
+                <button class="transition p-4 text-white bg-blue-500 hover:bg-blue-600 rounded-lg shadow-lg text-xs">
+                    habla con nosotros <i class="fa fa-envelope ml-2"></i>
+                </button>
+            </div>
+
+        </div>
+        <div class="z-1 absolute h-[100%] w-[35%] p-20 right-0">
+            <img id="jeep" src="{% static "images/car-2.png" %}" class="absolute right-[2em] top-[25%] w-[150%] max-w-none" />
+        </div>
+    </div>
+
+    <script src="{% static "js/services.js" %}"></script>
+
+{% endblock %}

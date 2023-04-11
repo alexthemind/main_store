@@ -1,0 +1,74 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block title %}
+    <title>Welcome RentCar</title>
+{% endblock %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <div class="flex space-between items-start">
+        <div id="left-block" class="absolute h-[100%] w-[0%] p-0 bg-yellow-500 overflow-hidden">
+
+            <!--FORMULARIO-->
+            <div id="form-block" class="rounded shadow-lg p-6 bg-white w-[60%] mt-[4em] mb-[.55em] overflow-hidden">
+                <div id="label-loading" class="absolute top-0 left-0 z-10 bg-white/75 w-[100%] h-full flex justify-center items-center flex-col">
+                    <i class="fa fa-spinner fa-pulse text-6xl text-gray-500"></i>
+                    <br>
+                    <span class="text-gray-500 text-sm">
+                        Favor espere...
+                    </span>
+                </div>
+                <!---->
+                {% csrf_token %}
+                <span class="text-xl font-bold">
+                    Haz tu pedido de forma rápida y eficaz
+                </span>
+                <br>
+                <br>
+                <div class="flex flex-col">
+                    <select name="brand" class="p-2 w-full rounded border text-gray-500 text-xs">
+                        <option value="0">Elija una marca</option>
+                    </select>
+                    <br>
+                    <select name="model" class="p-2 w-full rounded border text-gray-500 text-xs">
+                        <option value="0">Elija un modelo</option>
+                    </select>
+                    <br>
+                    <select name="type" class="p-2 w-full rounded border text-gray-500 text-xs">
+                        <option value="0">Elija un tipo</option>
+                    </select>
+                    <br>
+                    <div class="flex space-between items-center w-[100%]">
+                        <input name="from" type="date" class="p-2 w-[45%] rounded border text-gray-500 text-xs" />
+                        <div class="w-[10%]"></div>
+                        <input name="to" type="date" class="p-2 w-[45%] rounded border text-gray-500 text-xs" />
+                    </div>
+                    <br>
+                    <button id="btn-send" class="transition px-4 py-3 rounded text-white bg-yellow-500 hover:bg-yellow-600">
+                        consultar <i class="fa fa-send text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="z-1 absolute h-[100%] w-[35%] p-20 right-0">
+            <img id="jeep" src="{% static "images/car-1.png" %}" class="absolute right-[.5em] top-[25%] w-[170%] max-w-none" />
+        </div>
+    </div>
+    <!--ALERTAS-->
+    <div id="success" class="transition fixed z-10 p-4 w-full bg-green-500 text-white text-center text-xs">
+        <i class="fa fa-check"></i> solicitud enviada
+    </div>
+    <div id="error" class="transition fixed z-10 p-4 w-full bg-red-500 text-white text-center text-xs">
+        <i class="fa fa-close"></i> complete los campos requeridos
+    </div>
+    <div id="error_date1" class="transition fixed z-10 p-4 w-full bg-orange-500 text-white text-center text-xs">
+        <i class="fa fa-warning"></i> la fecha inicial no puede ser mayor a la final
+    </div>
+
+    <script src="{% static "js/main.js" %}"></script>
+
+{% endblock %}

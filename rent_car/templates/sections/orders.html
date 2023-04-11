@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+
+{% load static %}
+
+{% block title %}
+    <title>Ordenes</title>
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static "css/main.css" %}">
+    <div class="flex space-between items-start">
+        <div id="left-block" class="absolute h-[100%] w-[0%] p-0 bg-yellow-500 overflow-hidden">
+
+            <!--SERVICIOS-->
+            <br>
+            <div id="services-block">
+                <span class="text-4xl font-bold text-white drop-shadow-lg">
+                    Ordenes registradas
+                </span>
+                <br>
+                <br>
+                <div class="bg-white rounded p-4">
+                    <table id="tbl-orders" class="display" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Typo</th>
+                                <th>F. inicio</th>
+                                <th>F. fin</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="z-1 absolute h-[100%] w-[35%] p-20 right-0">
+            <img id="jeep" src="{% static "images/car-3.png" %}" class="absolute right-[0em] top-[25%] w-[132%] max-w-none" />
+        </div>
+    </div>
+
+    <script src="{% static "js/orders.js" %}"></script>
+
+{% endblock %}
