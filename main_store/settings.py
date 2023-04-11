@@ -25,7 +25,7 @@ SECRET_KEY = 'gh@cs3smq&lzske75xq!2g6xra7z-ra#3-#xia6b6nuty9bl&w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -126,5 +126,5 @@ STATICFILES_URL = [
     os.path.join(BASE_DIR,'rent_car','static')
 ]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+#STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+#STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
