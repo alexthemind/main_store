@@ -1,0 +1,113 @@
+
+#jeep {
+    animation-name: jeep;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .8s;
+    transform: scale(0, 0);
+    transition: all .3 ease-in-out;
+}
+
+@keyframes jeep {
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+        z-index: 5000;
+    }
+}
+
+#form-block {
+    animation-name: form_block;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .6s;
+    transform: scale(0, 0);
+    transition: all .3 ease-in-out;
+}
+
+@keyframes form_block {
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+#left-block {
+    animation-name: left-block;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 0%;
+    transition: all .3 ease-in-out;
+}
+
+@keyframes left-block {
+    0% {
+        width: 0%;
+        padding: 0;
+    }
+    100% {
+        width: 65%;
+        padding: 7%;
+    }
+}
+
+#services-block {
+    animation-name: form_block;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .6s;
+    transform: scale(0, 0);
+    transition: all .3 ease-in-out;
+}
+
+@keyframes services-block {
+    0% {
+        transform: scale(0, 0);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+#success {
+    bottom: 0;
+    transform: translate(0,30em);
+}
+#success.active {
+    transform: translate(0,0);
+}
+#error {
+    bottom: 0;
+    transform: translate(0,30em);
+}
+#error.active {
+    transform: translate(0,0);
+}
+#error_date1 {
+    bottom: 0;
+    transform: translate(0,30em);
+}
+#error_date1.active {
+    transform: translate(0,0);
+}
+#label-loading {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s ease-in-out;
+}
+#label-loading.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dataTables_wrapper {
+    font-size: 11px;
+}

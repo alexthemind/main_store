@@ -1,1 +1,1 @@
-py manage.py runserver
+web: gunicorn main_store.wsgi
