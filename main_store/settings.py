@@ -28,7 +28,7 @@ mimetypes.add_type("application/javascript",".js",True)
 SECRET_KEY = 'gh@cs3smq&lzske75xq!2g6xra7z-ra#3-#xia6b6nuty9bl&w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -130,6 +130,7 @@ STATIC_URL = '/static/'
 STATICFILES_URL = [
     os.path.join(BASE_DIR,'rent_car','static')
 ]
-
-#STATICFILES_DIRS = [os.path.join(BASE_DIR,'rent_car','static')]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'rent_car','static')
+]
 #STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
