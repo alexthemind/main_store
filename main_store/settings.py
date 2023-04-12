@@ -18,6 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # mime types
 mimetypes.add_type("text/css",".css",True)
+mimetypes.add_type("application/javascript",".js",True)
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +28,7 @@ mimetypes.add_type("text/css",".css",True)
 SECRET_KEY = 'gh@cs3smq&lzske75xq!2g6xra7z-ra#3-#xia6b6nuty9bl&w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
