@@ -28,7 +28,7 @@ mimetypes.add_type("application/javascript",".js",True)
 SECRET_KEY = 'gh@cs3smq&lzske75xq!2g6xra7z-ra#3-#xia6b6nuty9bl&w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
