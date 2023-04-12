@@ -133,4 +133,4 @@ STATICFILES_URL = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'rent_car','static')
 ]
-#STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR,'rent_car','static')
